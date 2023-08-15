@@ -53,7 +53,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
 <div class="container">
 
-<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt></a>
+<a class="navbar-brand logo_h" href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
@@ -120,7 +120,7 @@ magna aliqua.
 <div class="col-lg-4 col-md-6">
 <div class="single_feature">
 <div class="feature_head">
-<img src="img/features/icon1.png" alt>
+<img src="{{asset('assets/img/features/icon1.png')}}" alt>
 <h4>Emergency Services</h4>
 </div>
 <div class="feature_content">
@@ -136,7 +136,7 @@ dolore magna aliqua. Ut enim ad minim veniam.</p>
 <div class="col-lg-4 col-md-6">
 <div class="single_feature">
 <div class="feature_head">
-<img src="img/features/icon2.png" alt>
+<img src="{{asset('assets/img/features/icon2.png')}}" alt>
 <h4>Doctors Schedule</h4>
 </div>
 <div class="feature_content">
@@ -152,7 +152,7 @@ dolore magna aliqua. Ut enim ad minim veniam.</p>
 <div class="col-lg-4 col-md-6">
 <div class="single_feature">
 <div class="feature_head">
-<img src="img/features/icon3.png" alt>
+<img src="{{asset('assets/img/features/icon3.png')}}" alt>
 <h4>Online Appointment</h4>
 </div>
 <div class="feature_content">
@@ -222,7 +222,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon1.png" alt>
+<img src="{{asset('assets/img/department/d-icon1.png')}}" alt>
 </div>
 <h4>Cardiology</h4>
 </div>
@@ -231,7 +231,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon2.png" alt>
+<img src="{{asset('assets/img/department/d-icon2.png')}}" alt>
 </div>
 <h4>Urology</h4>
 </div>
@@ -240,7 +240,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon3.png" alt>
+<img src="{{asset('assets/img/department/d-icon3.png')}}" alt>
 </div>
 <h4>Dental Care</h4>
 </div>
@@ -249,7 +249,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon4.png" alt>
+<img src="{{asset('assets/img/department/d-icon4.png')}}" alt>
 </div>
 <h4>Eye Care</h4>
 </div>
@@ -258,7 +258,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon5.png" alt>
+<img src="{{asset('assets/img/department/d-icon5.png')}}" alt>
 </div>
 <h4>Neurology</h4>
 </div>
@@ -267,7 +267,7 @@ magna aliqua.</p>
 <div class="col-lg-2 text-center col-sm-6">
 <div class="single_department">
 <div class="dpmt-thumb">
-<img src="img/department/d-icon6.png" alt>
+<img src="{{asset('assets/img/department/d-icon6.png')}}" alt>
 </div>
 <h4>Plastic Surgery</h4>
 </div>
@@ -330,7 +330,7 @@ magna aliqua.</p>
 <div class="col-lg-3 col-sm-6">
 <div class="single_member">
 <div class="author">
-<img src="img/team/member1.png" alt>
+<img src="{{asset('assets/img/team/member1.png')}}" alt>
 </div>
 <div class="author_decs">
 <div class="social_icons">
@@ -348,7 +348,7 @@ magna aliqua.</p>
 <div class="col-lg-3 col-sm-6">
 <div class="single_member">
 <div class="author">
-<img src="img/team/member2.png" alt>
+<img src="{{asset('assets/img/team/member2.png')}}" alt>
 </div>
 <div class="author_decs">
 <div class="social_icons">
@@ -366,7 +366,7 @@ magna aliqua.</p>
 <div class="col-lg-3 col-sm-6">
 <div class="single_member">
 <div class="author">
-<img src="img/team/member3.png" alt>
+<img src="{{asset('assets/img/team/member3.png')}}" alt>
 </div>
 <div class="author_decs">
 <div class="social_icons">
@@ -384,7 +384,7 @@ magna aliqua.</p>
 <div class="col-lg-3 col-sm-6">
 <div class="single_member">
 <div class="author">
-<img src="img/team/member4.png" alt>
+<img src="{{asset('assets/img/team/member4.png')}}" alt>
 </div>
 <div class="author_decs">
 <div class="social_icons">
@@ -422,7 +422,7 @@ dolore magna aliqua.</p>
 <div class="row align-items-center">
 <div class="col-lg-4 col-md-3">
 <div class="blog_thumb">
-<img class="img-fluid" src="img/recent-blog/blog1.jpg" alt>
+<img class="img-fluid" src="{{asset('assets/img/recent-blog/blog1.jpg')}}" alt>
 </div>
 </div>
 <div class="col-lg-8 col-md-8">
@@ -447,7 +447,7 @@ dolore magna aliqua.</p>
 <div class="row align-items-center">
 <div class="col-lg-4 col-md-3">
 <div class="blog_thumb">
-<img class="img-fluid" src="img/recent-blog/blog2.jpg" alt>
+<img class="img-fluid" src="{{asset('assets/img/recent-blog/blog2.jpg')}}" alt>
 </div>
 </div>
 <div class="col-lg-8 col-md-8">
@@ -472,7 +472,7 @@ dolore magna aliqua.</p>
 <div class="row align-items-center">
 <div class="col-lg-4 col-md-3">
 <div class="blog_thumb">
-<img class="img-fluid" src="img/recent-blog/blog3.jpg" alt>
+<img class="img-fluid" src="{{asset('assets/img/recent-blog/blog3.jpg')}}" alt>
 </div>
 </div>
 <div class="col-lg-8 col-md-8">
@@ -566,7 +566,8 @@ magna aliqua.
 <div class="input-group add-on">
 <input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required type="email">
 <div style="position: absolute; left: -5000px;">
-<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value type="text">
+  
+<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value type="text" >
 </div>
 <div class="input-group-btn">
 <button class="genric-btn text-uppercase">
@@ -585,9 +586,7 @@ get started
 <div class="footer-bottom">
 <div class="container">
 <div class="d-flex justify-content-between align-items-center flex-wrap">
-<p class="footer-text">
-Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-</p>
+
 <div class="footer-social d-flex align-items-center">
 <a href="#"><i class="fa fa-facebook"></i></a>
 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -601,21 +600,21 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 
 
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendors/counter-up/jquery.counterup.js"></script>
-<script src="js/mail-script.js"></script>
+<script src="{{asset('assets/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('assets/js/popper.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/stellar.js')}}"></script>
+<script src="{{asset('assets/vendors/lightbox/simpleLightbox.min.js')}}"></script>
+<script src="{{asset('assets/vendors/nice-select/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('assets/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('assets/vendors/counter-up/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('assets/vendors/counter-up/jquery.counterup.js')}}"></script>
+<script src="{{asset('assets/js/mail-script.js')}}"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="js/gmaps.min.js"></script>
-<script src="js/theme.js"></script>
+<script src="{{asset('assets/js/gmaps.min.js')}}"></script>
+<script src="{{asset('assets/js/theme.js')}}"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
@@ -627,4 +626,4 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7f6a6c32894141ea","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}' crossorigin="anonymous"></script>
 </body>
-</html>
+</html>+
