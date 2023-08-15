@@ -8,12 +8,12 @@
 <title>Medicare Medical</title>
 
 <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-<link rel="stylesheet" href=".../vendors/linericon/style.css">
+<link rel="stylesheet" href="{{asset('assets/css/linericon/style.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
-<link rel="stylesheet" href=".../vendors/owl-carousel/owl.carousel.min.css">
-<link rel="stylesheet" href=".../vendors/lightbox/simpleLightbox.css">
-<link rel="stylesheet" href=".../vendors/nice-select/css/nice-select.css">
-<link rel="stylesheet" href=".../vendors/animate-css/animate.css">
+<link rel="stylesheet" href="{{asset('assets/css/owl-carousel/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/lightbox/simpleLightbox.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/nice-select/css/nice-select.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/animate-css/animate.css')}}">
 
 <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
@@ -25,7 +25,7 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-3 col-sm-6 col-4 header-top-left">
-<select class="default-select">
+<select class="default-select"> 
 <option data-display="English">English</option>
 <option value="1">Germany</option>
 <option value="2">Spanish</option>
