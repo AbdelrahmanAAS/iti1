@@ -1,95 +1,9 @@
 <!doctype html>
 <html lang="en">
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="icon" href="img/favicon.png" type="image/png">
-<title>Medicare Medical</title>
-
-<link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/linericon/style.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/owl-carousel/owl.carousel.min.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/lightbox/simpleLightbox.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/nice-select/css/nice-select.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/animate-css/animate.css')}}">
-
-<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-<script nonce="a0adb005-1a87-4927-bc42-2648b3eaae2d">(function(w,d){!function(j,k,l,m){j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const w of Object.entries(Object.entries(dataLayer).reduce(((x,y)=>({...x[1],...y[1]})),{})))zaraz.set(w[0],w[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const z=j.zaraz.q.shift();j[l].q.push(z)}r.defer=!0;for(const A of[localStorage,sessionStorage])Object.keys(A||{}).filter((C=>C.startsWith("_zaraz_"))).forEach((B=>{try{j[l]["z_"+B.slice(7)]=JSON.parse(A.getItem(B))}catch{j[l]["z_"+B.slice(7)]=A.getItem(B)}}));r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
+@extends('admin.head')
 <body>
 
-<header class="header_area">
-<div class="header-top">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-3 col-sm-6 col-4 header-top-left">
-<select class="default-select">
-<option data-display="English">English</option>
-<option value="1">Germany</option>
-<option value="2">Spanish</option>
-</select>
-</div>
-<div class="col-lg-9 col-sm-6 col-8 header-top-right">
-<a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953
-012 3654 896</span></span></a>
-<a href="/cdn-cgi/l/email-protection#fa898f8a8a95888eba9995969588969398d4999597"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text"><span class="__cf_email__" data-cfemail="37444247475845437754585b58455b5e551954585a">[email&#160;protected]</span></span></span></a>
-<a href="#" class="primary-btn text-uppercase">Appointment</a>
-</div>
-</div>
-</div>
-</div>
-<div class="main_menu">
-<div class="search_input" id="search_input_box">
-<div class="container">
-<form class="d-flex justify-content-between">
-<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-<button type="submit" class="btn"></button>
-<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-</form>
-</div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light">
-<div class="container">
-
-<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-
-<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-<ul class="nav navbar-nav menu_nav ml-auto">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item active"><a class="nav-link" href="about-us.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="departments.html">Department</a></li>
-<li class="nav-item submenu dropdown">
-<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-<ul class="dropdown-menu">
-<li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
-<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-</ul>
-</li>
-<li class="nav-item submenu dropdown">
-<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-<ul class="dropdown-menu">
-<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-</ul>
-</li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-<ul class="nav navbar-nav ml-auto">
-<li class="nav-item"><a href="#" class="search">
-<i class="lnr lnr-magnifier" id="search"></i></a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-</div>
-</header>
+@include('admin.header')
 
 
 <section class="banner_area">
