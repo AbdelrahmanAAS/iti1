@@ -11,7 +11,7 @@
                           class="lnr lnr-envelope"></span> <span class="text"><span class="text"><span
                                   class="__cf_email__"
                                   data-cfemail="71020401011e030531121e1d1e031d18135f121e1c">Medicare@hos.med</span></span></span></a>
-                  <a href="#" class="primary-btn text-uppercase">Appointment</a>
+                  <a href="dashboard" class="primary-btn text-uppercase">Appointment</a>
               </div>
           </div>
       </div>
@@ -41,27 +41,27 @@
 
               <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                   <ul class="nav navbar-nav menu_nav ml-auto">
-                      <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="departments.html">Department</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="about-us">About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="departments">Department</a></li>
                       <li class="nav-item submenu dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                               aria-haspopup="true" aria-expanded="false">Pages</a>
                           <ul class="dropdown-menu">
-                              <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
-                              <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                              <li class="nav-item"><a class="nav-link" href="doctors">Doctors</a></li>
+                              <li class="nav-item"><a class="nav-link" href="elements">Elements</a></li>
                           </ul>
                       </li>
                       <li class="nav-item submenu dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                               role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                           <ul class="dropdown-menu">
-                              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                              <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
+                              <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                              <li class="nav-item"><a class="nav-link" href="single-blog">Blog Details</a>
                               </li>
                           </ul>
                       </li>
-                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                      <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                   </ul>
                   <ul class="nav navbar-nav ml-auto">
                       <li class="nav-item"><a href="#" class="search">

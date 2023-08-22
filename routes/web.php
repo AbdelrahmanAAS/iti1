@@ -17,34 +17,38 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/about-us.html', function () {
+Route::get('/about-us', function () {
     return view('about-us');
 });
 
-Route::get('/blog.html', function () {
+Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/contact.html', function () {
+Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/departments.html', function () {
+Route::get('/departments', function () {
     return view('departments');
 });
 
-Route::get('/doctors.html', function () {
+Route::get('/doctors', function () {
     return view('doctors');
 });
 
-Route::get('/elements.html', function () {
+Route::get('/elements', function () {
     return view('elements');
 });
 
-Route::get('/index.html', function () {
+Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/single-blog.html', function () {
+Route::get('/single-blog', function () {
     return view('single-blog');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard.employee.index');
 });

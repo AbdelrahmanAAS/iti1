@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-@extends('admin.head')
+    <head>@include('admin.head')</head>
+
 
 <body>
 
