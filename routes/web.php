@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +54,13 @@ Route::get('/single-blog', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.employee.index');
 });
+
+
+Route::get('/appointment', [AppointmentController::class, 'index']);
+
+Route::post('/appointment', 'AppointmentController@store')->name('appointments.store');
+
+
+
+
+

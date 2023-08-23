@@ -496,9 +496,10 @@ button:focus {
 
 .about_right {
   background: url(../img/about-bg2.png);
-  background-size: cover;
+  background-size:cover;
   z-index: 1;
-  padding: 20px; }
+  padding: 20px;
+ }
   .about_right .about_inner {
     border: 1px solid #eeeeee;
     padding: 90px 20px 125px;

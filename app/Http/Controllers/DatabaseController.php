@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Database;
+use PDO;
 
 class DatabaseController extends Controller
 {
+        
      public function index()
     {
         
@@ -18,4 +20,13 @@ class DatabaseController extends Controller
             return view('employees.index');
         
     }
+
+    public function __construct()
+    {
+        
+        $connection= new PDO("mysql:host=localhost;dbname=itiproject","root","");;
+        
+    }
+
+    
 }

@@ -1,21 +1,18 @@
 
-@include('dashboard.layout.Database');
-@include('dashboard.layout.Validate');
-@include('dashboard.layout.Employee');
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
 
 <head>
-  @include('dashboard.layout.head')
+  @include('dashboard.layout.header')
 </head>
 
 <body>
 
   <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
-    @include("dashboard.layout.header")
+    @include("dashboard.layout.head")
     @include("dashboard.layout.aside")
 
       
@@ -61,7 +58,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                         @foreach($data as $value)
+                        {{--@foreach($data as $value)
                         <tr>
                           <td>{{$value["SSN"]}}</td>
                           <td>{{$value["SSN"]}}</td>
@@ -72,7 +69,7 @@
                             <a href="delete.php?ssn={{$value["SSN"]}}" class="btn btn-danger">delete</a>
                           </td>
                         </tr>
-                       @endforeach
+                       @endforeach--}}
                       </tbody>
                     </table>
                   </div>

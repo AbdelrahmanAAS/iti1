@@ -5,13 +5,13 @@
               <div class="col-lg-3 col-sm-6 col-4 header-top-left">
               </div>
               <div class="col-lg-9 col-sm-6 col-8 header-top-right">
-                  <a href="tel:+01000055533"><span class="lnr lnr-phone-handset"></span> <span
-                          class="text"><span class="text">+2 010 0005 5599</span></span></a>
+                  <a href="dashboard"><span class="lnr lnr-phone-handset"></span> <span
+                          class="text"><span class="text">Admin</span></span></a>
                   <a href=""><span
                           class="lnr lnr-envelope"></span> <span class="text"><span class="text"><span
                                   class="__cf_email__"
                                   data-cfemail="71020401011e030531121e1d1e031d18135f121e1c">Medicare@hos.med</span></span></span></a>
-                  <a href="dashboard" class="primary-btn text-uppercase">Appointment</a>
+                  <a href="appointment" class="primary-btn text-uppercase">Appointment</a>
               </div>
           </div>
       </div>

@@ -20,4 +20,4 @@
     href="../layout/assets/images/favicon.png"
   />
   <!-- Custom CSS -->
-  <link href="../layout/assets/css/style.min.css" rel="stylesheet" />
+  <link href="{{asset('assets/css/style.min.css')}}" rel="stylesheet" />
