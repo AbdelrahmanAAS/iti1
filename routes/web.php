@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,10 +41,6 @@ Route::get('/doctors', function () {
     return view('doctors');
 });
 
-Route::get('/elements', function () {
-    return view('elements');
-});
-
 Route::get('/index', function () {
     return view('index');
 });
@@ -51,10 +49,13 @@ Route::get('/single-blog', function () {
     return view('single-blog');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.employee.index');
-});
 
+Route::get('dashboard',[AuthController::class,'dashboard'])->name('dashboard') ;
+
+
+
+Route::get('login',[AuthController::class ,'login'])->name('login');
+Route::get('register',[AuthController::class ,'register'])->name('register');
 
 Route::get('/appointment', [AppointmentController::class, 'index']);
 

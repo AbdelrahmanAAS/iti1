@@ -11,14 +11,17 @@ class AppointmentController extends Controller
     public function index(){
         return view('appointment');
     }
+    
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'doctor_type' => 'required',
+            'department' => 'required',
             'time' => 'required',
+            'date' => 'required',
+            'description'=>'nullable'
         ]);
 
         //Appointment::create($validatedData);

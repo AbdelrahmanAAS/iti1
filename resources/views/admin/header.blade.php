@@ -5,7 +5,7 @@
               <div class="col-lg-3 col-sm-6 col-4 header-top-left">
               </div>
               <div class="col-lg-9 col-sm-6 col-8 header-top-right">
-                  <a href="dashboard"><span class="lnr lnr-phone-handset"></span> <span
+                  <a href="{{Route('login')}}"><span class="lnr lnr-phone-handset"></span> <span
                           class="text"><span class="text">Admin</span></span></a>
                   <a href=""><span
                           class="lnr lnr-envelope"></span> <span class="text"><span class="text"><span
@@ -49,7 +49,7 @@
                               aria-haspopup="true" aria-expanded="false">Pages</a>
                           <ul class="dropdown-menu">
                               <li class="nav-item"><a class="nav-link" href="doctors">Doctors</a></li>
-                              <li class="nav-item"><a class="nav-link" href="elements">Elements</a></li>
+                              
                           </ul>
                       </li>
                       <li class="nav-item submenu dropdown">
