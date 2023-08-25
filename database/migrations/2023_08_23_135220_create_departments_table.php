@@ -9,16 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->id();
-            $table->string('Dname');
-            $table->string('imgpath');
-            $table->string('imgname');
-            $table->string('descirption')->nullable();
-        });
-    }
+    public function up()
+{
+    Schema::create('departments', function (Blueprint $table) {
+        $table->increments('Dno');
+        $table->string('Depname')->unique();
+        $table->string('imgpath')->nullable();
+        $table->string('imgname')->default("image not find");
+        $table->text('description')->nullable();
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.

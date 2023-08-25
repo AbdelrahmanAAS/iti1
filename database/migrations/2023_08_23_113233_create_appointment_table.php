@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('appointment', function (Blueprint $table) {
+       /* Schema::create('appointment', function (Blueprint $table) {
             $table->string('name');
             $table->string('email');
             $table->number_format('Phone');
@@ -19,7 +19,7 @@ return new class extends Migration
             $table->time('Ltime');
             $table->description('description')->nullable();
             $table->department('Dno');
-        });
+        });*/
     }
 
     /**

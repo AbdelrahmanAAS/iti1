@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function dashboard(){
-        return view('dashboard.employee.index');
+        return view('dashboard.index');
     }
     
     public function login(){
-        return view('auth.login');
+        return view('dashboard.login');
     }
 
     public function register(){
-        return view('auth.register');
+        return view('dashboard.register');
     }
 }

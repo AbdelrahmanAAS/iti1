@@ -15,8 +15,9 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        $data=Department::select('dno','dname')->get();
-        return view('admin.departments.index',['data'=>$data]);
+        $data=Department::get();
+        return $data;
+        //return view('dashboard.departments.index',['data'=>$data]);
     }
 
     /**
@@ -26,7 +27,8 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        $value=Department::get();
+    
     }
 
     /**

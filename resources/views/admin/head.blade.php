@@ -6,7 +6,7 @@
   <title>Medicare Medical</title>
 
   <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/css/linericon/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/linericon/style1.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/owl-carousel/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/lightbox/simpleLightbox.css') }}">

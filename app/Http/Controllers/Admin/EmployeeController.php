@@ -17,8 +17,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $data=Employee::select('SSN','fname','lname','dno')->get();
-        return view('admin.employees.index',['data'=>$data]);
+        $data=Employee::select('Did','Fullname','lname','dno')->get();
+        return view('admina.employees.index',['data'=>$data]);
     }
 
     /**
@@ -29,7 +29,7 @@ class EmployeeController extends Controller
     public function create()
     {
         $deptData=Department::select('dno','dname')->get();
-        return view('admin.employees.create',['deptData'=>$deptData]);
+        return view('admina.employees.create',['deptData'=>$deptData]);
     }
 
     /**
@@ -38,7 +38,7 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EmployeeRequest $request)
+    public function store(Request $request)
     {
         //return $request->file('image') // tempname
         //->getClientOriginalName() // name.pnh

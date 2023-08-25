@@ -4,9 +4,8 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Department;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,35 +18,61 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/home', function () {
+    return view('/resources/views/index.blade.php');
 });
 
-Route::get('/about-us', function () {
+Route::get('about-us', function () {
     return view('about-us');
 });
 
-Route::get('/blog', function () {
+Route::get('blog', function () {
     return view('blog');
 });
 
-Route::get('/contact', function () {
+Route::get('contact', function () {
     return view('contact');
 });
 
-Route::get('/departments', function () {
-    return view('departments');
+Route::prefix('departments')->group(function () {
+
+    Route::get('/', function () {
+        return view('/departments');
+    });
+
+    Route::get('/index', [DepartmentController::class, 'index']);
+
+});
+Route::prefix('dashboard')->group(function(){
+    Route::get('/', function () {
+        return view('dashboard.index');
+    })->name('index');
+
+    Route::get('login', function () {
+        return view('dashboard.login');
+    })->name('login');
+    
+    Route::get('registration', function () {
+        return view('dashboard.registration');
+    })->name('registration');
+    
+});
+Route::prefix('doctors')->group(function () {
+
+    Route::get('/', function () {
+        return view('doctors');
+    });
+
+    Route::get('/index', [DepartmentController::class, 'index']);
+
 });
 
-Route::get('/doctors', function () {
-    return view('doctors');
-});
 
-Route::get('/index', function () {
+Route::get('index', function () {
     return view('index');
 });
 
-Route::get('/single-blog', function () {
+Route::get('single-blog', function () {
     return view('single-blog');
 });
 
@@ -63,10 +88,10 @@ Route::get('/single-blog', function () {
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 Route::group(['prefix'=>'admin'] ,function (){
-
+    
     // Route::get('employees', [EmployeeController::class,'index'])->name('employees.index');
     // Route::get('employees/create', [EmployeeController::class,'create'])->name('employees.create');
     // Route::post('employees', [EmployeeController::class,'store'])->name('employees.store');
@@ -78,20 +103,9 @@ Route::group(['prefix'=>'admin'] ,function (){
         'departments'=>DepartmentController::class,
 
     ]);
-});
+});*/
 
-Route::get('dashboard',[AuthController::class,'dashboard'])->name('dashboard') ;
-
-
-
-Route::get('login',[AuthController::class ,'login'])->name('login');
-Route::get('register',[AuthController::class ,'register'])->name('register');
-
-Route::get('/appointment', [AppointmentController::class, 'index']);
-
-Route::post('/appointment', 'AppointmentController@store')->name('appointments.store');
+//Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
 
-
-
-
+Route::get('appointment', [AppointmentController::class, 'index']);
