@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="{{ asset('assets/css/lightbox/simpleLightbox.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/nice-select/css/nice-select.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/animate-css/animate.css') }}">
-
+  <link rel="stylesheet" href="{{ asset('assets/css/dataTables.bootstrap4.css')}}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     @yield("content")
   <script nonce="765c3066-71f3-4299-8e00-ced1dac210e5">

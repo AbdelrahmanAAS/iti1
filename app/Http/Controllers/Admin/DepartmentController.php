@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Department;
+use App\Models\Doctor;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
@@ -13,11 +15,11 @@ class DepartmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $data=Department::get();
-        return $data;
-        //return view('dashboard.departments.index',['data'=>$data]);
+        return view('departments',['data'=>$data]);
     }
 
     /**
@@ -25,12 +27,7 @@ class DepartmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $value=Department::get();
-    
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      *
@@ -39,19 +36,20 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $data=Department::findOrFail($id);
-        return view('admin.departments.show',['data'=>$data]);
+        if($request->file('image')){
+            $image_name= $request->file('image')->getClientOriginalName();
+            $request->file('image')->storeAS('employees',$image_name,'upload');
+            $image_name=$request->SSN." ".$image_name;
+        }else{
+            $image_name=null;
+        }
+        Department::create([
+            'Dno'=>$request->SSN,
+            'Depname'=>$request->Fname,
+            'imgname'=>$image_name,
+            'description'=>$request->Dno
+        ]);
+        return redirect()->back();
     }
 
     /**
@@ -72,10 +70,20 @@ class DepartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    
+        public function update(Request $request ,$id)
+        {
+            $employee=Department::findOrFail($id);
+            $employee->update([
+                'Dno'=>$request->SSN,
+                'depname'=>$request->Fname,
+                'imgname'=>$request->imagename,
+                'description'=>$request->description
+            ]);
+    
+            return redirect()->route('department.index')->with('msg','Updated...');
+        }
+    
 
     /**
      * Remove the specified resource from storage.

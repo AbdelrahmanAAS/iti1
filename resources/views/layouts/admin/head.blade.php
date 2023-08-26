@@ -11,7 +11,7 @@
     content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
   />
   <meta name="robots" content="noindex,nofollow" />
-  <title>@yield('title')</title>
+  
   <!-- Favicon icon -->
   <link
     rel="icon"
@@ -20,4 +20,4 @@
     href="{{ URL::asset('assets/images/favicon.png') }}"
   />
   <!-- Custom CSS -->
-  <link href="{{ URL::asset('assets/css/style.min.css') }}" rel="stylesheet" />
+  <link href="{{ URL::asset('assets/css/styles.min.css') }}" rel="stylesheet" />

@@ -5,7 +5,7 @@
               <div class="col-lg-3 col-sm-6 col-4 header-top-left">
               </div>
               <div class="col-lg-9 col-sm-6 col-8 header-top-right">
-                  <a href="login"><span class="lnr lnr-phone-handset"></span> <span
+                  <a href="dashboard"><span class="lnr lnr-phone-handset"></span> <span
                           class="text"><span class="text">Admin</span></span></a>
                   <a href=""><span
                           class="lnr lnr-envelope"></span> <span class="text"><span class="text"><span
@@ -32,7 +32,7 @@
 
               <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                   <ul class="nav navbar-nav menu_nav ml-auto">
-                      <li class="nav-item active"><a class="nav-link" href="{{route('/home')}}">Home</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="dashboard">Home</a></li>
                       <li class="nav-item"><a class="nav-link" href="about-us">About</a></li>
                       <li class="nav-item"><a class="nav-link" href="departments">Department</a></li>
                       <li class="nav-item submenu dropdown">

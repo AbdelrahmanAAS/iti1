@@ -1,3 +1,4 @@
+
 <head>
   <link href="{{asset('assets/css/login.css')}}" rel="stylesheet">
   @include('admin.head')
@@ -5,13 +6,19 @@
 <header>
   @include('admin.header')
 </header>
+
+
 <div class="login-page">
   <div class="form">
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
+    <form action="{{url('logins')}}" method="POST" class="login-form">
+      @csrf
+      <input type="text" placeholder="email" name="email" required/>
+      <input type="password" placeholder="password" name="password" required/>
+      @if($errors)
+
+      {{$errors}}
+      @endif
       <button>login</button>
-      <p class="message">Not registered? <a href="{{route('registration')}}">Create an account</a></p>
     </form>
   </div>
 </div>

@@ -21,21 +21,15 @@
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="{{ route('employees.index') }}" class="sidebar-link"
+                    <a href="doctors" class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
                       ><span class="hide-menu"> All Employees </span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="{{ route('employees.create') }}" class="sidebar-link"
+                    <a href="{{ route('Doctor.add') }}" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu"> Add Employee </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="{{ route('employees.archive') }}" class="sidebar-link"
-                      ><i class="mdi mdi-note-plus"></i
-                      ><span class="hide-menu"> Archive </span></a
                     >
                   </li>
                 </ul>
@@ -50,13 +44,13 @@
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="{{ route('departments.index') }}" class="sidebar-link"
+                    <a href="departments/index'" class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
                       ><span class="hide-menu"> All Departments </span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
+                    <a href="departments/index" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu"> Add Departments </span></a
                     >

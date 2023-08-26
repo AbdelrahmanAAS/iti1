@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('Did');
             $table->string('FUllname');
             $table->tinyInteger('Dno');
-            $table->foreign('Dno')->references()->no('departments');
+            $table->foreignkey('Dno')->references()->no('departments');
             $table->string('img');
             $table->string('imgname');
             $table->timestamps();

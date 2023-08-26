@@ -3,31 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Employee;
+use App\Models\Doctor;
 
 class EmployeeController extends Controller
 {
-    public function index()
+    public function show()
     {
-        $employee = new Employee();
-        $data = $employee->index();
-        
-        return view('employees.index', compact('data'));
+        $all_d=Doctor::get();
+        return view('dashboard.employees.index',['all_d'=>$all_d]);
     }
 
     public function store(Request $request)
     {
-        $employee = new Employee();
-        $employee->set_ssn($request->input('ssn'));
-        $employee->set_fname($request->input('fname'));
-        $employee->set_lname($request->input('lname'));
-        $employee->set_gender($request->input('gender'));
-        $employee->set_dno($request->input('dno'));
-
-        if ($employee->store()) {
-            return redirect()->back()->with('success', 'Employee stored successfully.');
+        $doctor = new Doctor();
+        $doctor->set_Did($request->input('ID'));
+        $doctor->set_Fname($request->input('Fullname'));
+        $doctor->set_department($request->input('department'));
+        if ($doctor->store()) {
+            return redirect()->back()->with('success', 'doctor stored successfully.');
         } else {
             return redirect()->back()->with('error', 'Failed to store employee.');
         }
     }
+
 }

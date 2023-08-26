@@ -17,9 +17,7 @@
       data-boxed-layout="full"
     >
 
-      <header class="topbar" data-navbarbg="skin5">
-        @include('layouts.admin.navbare')
-      </header>
+      
 
       <aside class="left-sidebar" data-sidebarbg="skin5">
         <!-- Sidebar scroll-->

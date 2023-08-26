@@ -1,14 +1,15 @@
 @extends('layouts.admin.master')
+@section("bread-crumb")
 <div class="page-breadcrumb">
     <div class="row">
       <div class="col-12 d-flex no-block align-items-center">
-        <h4 class="page-title">Doctors</h4>
+        <h4 class="page-title">Students</h4>
         <div class="ms-auto text-end">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">
-              <a href="#">update</a></li>
+              <a href="#">Add New</a></li>
               </li>
             </ol>
           </nav>
@@ -16,28 +17,43 @@
       </div>
     </div>
   </div>
-
+@endsection
+@section("content")
 <div class="row">
     <div class="col-md-12">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error )
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        @if (Session::has('msg'))
+        <div class="alert alert-success">{{ Session::get('msg') }}</div>
+        @endif
         <div class="card">
-          <form class="form-horizontal" action="{{ route('Doctor.edit') }}" enctype="multipart/form-data" method="post">
+          <form class="form-horizontal" action="{{ route('employees.update') }}" enctype="multipart/form-data" method="post">
             @csrf
-            < class="card-body">
+            <div class="card-body">
             <div class="form-group row">
                 <label
                   for="SSN"
                   class="col-sm-3 text-end control-label col-form-label"
-                  >Did</label
+                  >Doctor_ID</label
                 >
                 <div class="col-sm-9">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control @error('Did') is-invalid @enderror"
                     id="SSN"
                     placeholder="Id Here"
-                    name="Did"
-                    value="4"
+                    name="did"
                   />
+                  @error('DId')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
               <div class="form-group row">
@@ -49,16 +65,16 @@
                 <div class="col-sm-9">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control @error('Fname') is-invalid @enderror"
                     id="fname"
                     placeholder="First Name Here"
                     name="Fname"
-                    value="Michail"
                   />
+                  @error('Fname')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                 </div>
               </div>
-            
-             
               <div class="form-group row">
                 <label
                   for="image"
@@ -74,21 +90,18 @@
                   />
                 </div>
               </div>
-              
-            
+              </div>
               <div class="form-group row">
                 <label
                   for="Department"
                   class="col-sm-3 text-end control-label col-form-label"
-                  >Department</label
-                >
+                  >Department</label>
                 <div class="col-sm-9">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="dep"
-                    name="deapartment"
-                  />
+                  <select class="form-control" name="Dno">
+                    @foreach ($deptData as $dept)
+                    <option value="{{ $dept['dno'] }}">{{ $dept['dname'] }}</option>
+                    @endforeach
+                  </select>
                 </div>
               </div>
             </div>
@@ -104,3 +117,5 @@
       </div>
   </div>
 
+
+@endsection

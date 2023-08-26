@@ -7,6 +7,7 @@ use App\Http\Requests\EmployeeRequest;
 use App\Models\Department;
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Models\Doctor;
 
 class EmployeeController extends Controller
 {
@@ -15,22 +16,13 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function doc()
     {
-        $data=Employee::select('Did','Fullname','lname','dno')->get();
-        return view('admina.employees.index',['data'=>$data]);
+        $data=Doctor::get();
+        return view('/doctors',['doctors'=>$data]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $deptData=Department::select('dno','dname')->get();
-        return view('admina.employees.create',['deptData'=>$deptData]);
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -40,9 +32,7 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //return $request->file('image') // tempname
-        //->getClientOriginalName() // name.pnh
-        //->getClientOriginalExtension() //png
+       
         if($request->file('image')){
             $image_name= $request->file('image')->getClientOriginalName();
             $request->file('image')->storeAS('employees',$image_name,'upload');
@@ -51,31 +41,14 @@ class EmployeeController extends Controller
             $image_name=null;
         }
         Employee::create([
-            'SSN'=>$request->SSN,
+            'Did'=>$request->SSN,
             'Fname'=>$request->Fname,
-            'Lname'=>$request->Lname,
-            'gender'=>$request->Gender,
-            'Email'=>$request->Email,
             'image'=>$image_name,
-            'dno'=>$request->Dno
+            'department'=>$request->Dno
         ]);
-        return redirect()->back()->with('msg','Added...');
-        // return redirect()->route('employees.index')->with('msg','Added...');
+        return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $data=Employee::findOrFail($id);  //primary key
-        // $data=Employee::where('SSN',$id)->first();  //as choice
-
-        return view('admin.employees.show',['data'=>$data]);
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -83,11 +56,15 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $deptData=Department::select('dno','dname')->get();
-        $data=Employee::findOrFail($id);
-        return view('admin.employees.edit',['deptData'=>$deptData,'data'=>$data]);
+        $employee=Employee::findOrFail($request->Did);
+        $employee->update([
+            'Did'=>$request->Did,
+            'Fname'=>$request->Fname,
+            'Department'=>$request->dep,
+            'description'=>$request->description
+        ]);
     }
 
     /**

@@ -9,7 +9,7 @@
 <body>
     @include('admin.header')
 
-    <form action="{{ route('appointments.store') }}" method="POST">
+    <form action="" method="POST">
         @csrf
         <div class="col-lg-4 offset-lg-3 col-md-6 offset-md-1 he">
             <div class="about_right overlay">
@@ -35,9 +35,9 @@
                     </div>
 
                     <div>
-                        <label for="doctor_type">Doctor Type:</label>
+                        <label for="doctor_type">Department:</label>
                         <select id="doctor_type" name="doctor_type" required>
-                            <option value="1">Type 1</option>
+                            <option value="1">Urology</option>
                             <option value="2">Type 2</option>
                             <option value="3">Type 3</option>
                         </select>

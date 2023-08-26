@@ -1,3 +1,4 @@
+{{$all_d}}
 @extends('layouts.admin.master')
 @section('title','All Employees')
 @section('css')
@@ -50,16 +51,15 @@
                         </tr>
                     </thead>
                         <tbody>
-                            @forelse ($data as $value)
+                            @forelse ($all_d as $value)
                             <tr>
                                 {{-- <td>{{ $loop->iteration }}</td> --}}
-                                <td>{{ $value['SSN'] }}</td>
-                                <td>{{ $value['fname']." ".$value['lname']}}</td>
-                                <td>{{ $value->department->dname }}</td>
+                                <td>{{ $value['DID'] }}</td>
+                                <td>{{ $value['Fname']}}</td>
+                                
                                 <td>
-                                    <a href="{{ route('employees.show',$value['SSN']) }}" class="btn btn-primary">show</a>
-                                    <a href="{{ route('employees.edit',$value['SSN']) }}" class="btn btn-success">edit</a>
-                                    <form action="{{ route('employees.destroy',$value['SSN']) }}" method="post" style="display: inline-block">
+                                    <a href="{{ route('dashboard.employees.edit',$value['Did']) }}" class="btn btn-success">edit</a>
+                                    <form action="{{ route('dashboard.employees.destroy',$value['Did']) }}" method="post" style="display: inline-block">
                                         @csrf
                                         @method('DELETE')
                                         <input type="submit" value="delete" class="btn btn-danger" >
@@ -71,14 +71,6 @@
                                 <td colspan="4" align="center">No Data</td>
                             </tr>
                             @endforelse
-
-                        <tfoot>
-                          <td>name</td>
-                          <td>position</td>
-                          <td>office</td>
-                        </tfoot>
-
-
                     </table>
                   </div>
                 </div>
